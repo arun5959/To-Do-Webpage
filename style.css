@@ -1,0 +1,238 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    background-image: url('background-image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header {
+    height: 80px;
+    background-image: linear-gradient(to bottom, rgb(255, 210, 185), rgb(255, 210, 185), rgba(255, 210, 185, 0.7), rgba(255, 210, 185, 0.4));
+    border-bottom: 1px solid rgb(252, 198, 169);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    color: rgb(43, 65, 65);
+}
+
+.heading {
+    font-size: 2.5rem;
+    margin-left: 25px;
+}
+
+.heading:hover {
+    cursor: default;
+}
+
+#logo {
+    height: 80px;
+    float: inline-end;
+    margin-right: 25px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.hero-section {
+    height: 400px;
+    width: 700px;
+    color: rgb(43, 65, 65);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 350px;
+}
+
+.hero-head {
+    font-size: 4rem;
+    width: 500px;
+    font-weight: 700;
+    margin-top: 100px;
+}
+
+.add-tasks {
+    height: min-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 700px;
+}
+
+#enter-task {
+    height: 50px;
+    font-size: 1.15rem;
+    border-radius: 30px;
+    padding-left: 18px;
+    border: 2px solid rgb(194, 194, 194);
+    color: rgb(42, 42, 42);
+    width: 75%;
+    margin-left: 50px;
+}
+
+#enter-task:focus {
+    outline: none;
+    border-color: rgb(194, 194, 194);
+    box-shadow: 0 0 3px 2px rgb(42, 42, 42);
+}
+
+#enter-task:hover {
+    background-color: rgb(246, 246, 246);
+}
+
+#submit-button {
+    background-color: rgb(43, 65, 65);
+    color: white;
+    font-size: 1.15rem;
+    border-radius: 25px;
+    height: 50px;
+    width: 50px;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+}
+
+#submit-button:hover {
+    box-shadow: 0 0 2px 1px rgb(43, 65, 65);
+    cursor: pointer;
+}
+
+#submit-button:active {
+    transform: scale(0.96);
+}
+
+.to-do-container {
+    max-height: 500px;
+    width: 550px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.to-do-container>*:not(:first-child) {
+    margin-top: 1rem;
+}
+
+.to-do-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FFF4EC;
+    border-radius: 40px;
+    height: 100px;
+    color: rgb(43, 65, 65);
+    margin-right: 15px;
+    transition: background-color 1.5s ease, text-decoration 1.5s ease;
+}
+
+.task-container {
+    width: 75%;
+}
+
+.task {
+    font-size: 1.15rem;
+    font-weight: 500;
+    padding: 20px;
+}
+
+.task-completed {
+    background-color: #6BBF59;
+    color: white;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    font-size: 1rem;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.task-completed:active {
+    transform: scale(0.92);
+}
+
+.task-completed:hover {
+    cursor: pointer;
+}
+
+.delete-task {
+    background-color: #E57373;
+    color: white;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    font-size: 1rem;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.delete-task:hover {
+    cursor: pointer;
+}
+
+.delete-task:active {
+    transform: scale(0.92);
+}
+
+/* Chrome, Safari, Edge */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    border: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(43, 65, 65, 0.7);
+    border-radius: 10px;
+}
+
+.fade-out {
+    animation: fadeOutAnim 1.5s forwards;
+}
+
+@keyframes fadeOutAnim {
+    to {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+}
+
+@keyframes emergeFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.emerge {
+    animation: emergeFromTop 1.5s ease forwards;
+}
