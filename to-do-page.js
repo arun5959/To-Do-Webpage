@@ -52,6 +52,8 @@ function deleteTask(event) {
     if (!btn) return;
     const taskCard = btn.closest(".to-do-child");
     if (taskCard) {
+        taskCard.style.backgroundColor = "#e76c6cff";
+        
         taskCard.classList.add('fade-out');
         setTimeout(() => {
             taskCard.remove();
@@ -66,4 +68,5 @@ inputField.addEventListener('keydown', function(event) {
         event.preventDefault(); // Prevent form submission or default action
         addTask();
     }
+
 });
