@@ -235,4 +235,90 @@ main {
 
 .emerge {
     animation: emergeFromTop 1.5s ease forwards;
+
+}
+
+/* Making the webpage responsive */
+
+@media (max-width: 450px) {
+  html {
+    font-size: 15px;
+  }
+  header {
+    height: 60px; /* 3/4th of 80px */
+    max-width: 100vw;
+    padding: 0 8px;
+  }
+  .heading {
+    font-size: 1.4rem; /* scaled down from 2.5rem */
+    margin-left: 10px;
+  }
+  #logo {
+    height: 60px; /* 3/4th of original 80px */
+    margin-right: 10px;
+  }
+  .hero-section {
+    height: 180px;
+    width: 280px;
+    border-radius: 140px;
+    font-size: 1rem;
+    padding: 12px 0;
+  }
+  .hero-head {
+    font-size: 1.3rem; /* scaled down from 4rem */
+    width: 90%;
+    margin-top: 40px;
+  }
+  .add-tasks {
+    width: 95vw;
+    min-width: 0;
+    flex-direction: column;
+    padding: 0;
+    gap: 10px;
+  }
+  #enter-task {
+    width: 70vw;
+    min-width: 120px;
+    font-size: 0.95rem;
+    height: 36px;
+    margin-left: 0;
+    border-radius: 20px;
+    padding-left: 12px;
+  }
+  #submit-button {
+    height: 36px;
+    width: 36px;
+    font-size: 1rem;
+    margin-right: 0;
+    border-radius: 18px;
+  }
+  .to-do-container {
+    width: 88vw;
+    max-width: 350px;
+    max-height: 290px;
+    min-width: 0;
+    margin: 0;
+  }
+  .to-do-child {
+    height: 58px;
+    border-radius: 20px;
+    margin-right: 5px;
+    padding: 0;
+  }
+  .task-container {
+    width: 60%;
+    min-width: 0;
+  }
+  .task {
+    font-size: 0.93rem;
+    padding: 6px;
+  }
+  .task-completed,
+  .delete-task {
+    height: 26px;
+    width: 26px;
+    font-size: 0.9rem;
+    border-radius: 13px;
+    margin-right: 6px;
+  }
 }
