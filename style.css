@@ -295,7 +295,7 @@ main {
   .to-do-container {
     width: 88vw;
     max-width: 350px;
-    max-height: 290px;
+    max-height: fit-content;
     min-width: 0;
     margin: 0;
   }
@@ -322,3 +322,4 @@ main {
     margin-right: 6px;
   }
 }
+
